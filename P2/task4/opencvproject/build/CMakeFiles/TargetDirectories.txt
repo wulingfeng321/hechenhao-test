@@ -1,0 +1,3 @@
+/home/wulingfeng/文档/win-test/P2/task4/opencvproject/build/CMakeFiles/edit_cache.dir
+/home/wulingfeng/文档/win-test/P2/task4/opencvproject/build/CMakeFiles/rebuild_cache.dir
+/home/wulingfeng/文档/win-test/P2/task4/opencvproject/build/CMakeFiles/opencvproject.dir
