@@ -1,6 +1,6 @@
 源代码：
+
 	#include <opencv2/opencv.hpp>
-	
 	int main() {
 	    cv::Mat image = cv::imread("image.jpg");
 	    if(image.empty()) {
