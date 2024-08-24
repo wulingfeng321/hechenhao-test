@@ -7,4 +7,3 @@
 subdirs("gtest")
 subdirs("accept_pkg")
 subdirs("send_pkg")
-subdirs("wpr_simulation")

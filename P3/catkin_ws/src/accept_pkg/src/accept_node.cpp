@@ -1,26 +1,9 @@
 #include <ros/ros.h>
-#include <std_msgs/Int64.h>
+#include "send_pkg/xyz.h"
 
-int num=0;
-void chatterCallback(const std_msgs::Int64::ConstPtr& msg)
+void chatterCallback(const send_pkg::xyz::ConstPtr& msg)
 {
-    //ROS_WARN("I heard: [%ld]", msg->data);
-    switch(num%3)
-    {
-        case 0:
-            printf("X: %ld   ", msg->data);
-            break;
-        case 1:
-            printf("Y: %ld   ", msg->data);
-            break;
-        case 2:
-            printf("Z: %ld   ", msg->data);
-            break;
-        default:
-            break;
-    }
-    num++;
-    fflush(stdout);
+    printf("X: %ld Y: %ld Z: %ld\n",msg->x,msg->y,msg->z);
 }
 int main(int argc, char **argv)
 {

@@ -68,30 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -135,6 +111,30 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/wulingfeng/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wulingfeng/catkin_ws/build/CMakeFiles /home/wulingfeng/catkin_ws/build/send_pkg/CMakeFiles/progress.marks
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_generate_messages.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_generate_messages.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_generate_messages.dir/rule
+
+# Convenience name for target.
+send_pkg_generate_messages: send_pkg/CMakeFiles/send_pkg_generate_messages.dir/rule
+
+.PHONY : send_pkg_generate_messages
+
+# fast build rule for target.
+send_pkg_generate_messages/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_generate_messages.dir/build.make send_pkg/CMakeFiles/send_pkg_generate_messages.dir/build
+.PHONY : send_pkg_generate_messages/fast
+
+# Convenience name for target.
 send_pkg/CMakeFiles/send_node.dir/rule:
 	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_node.dir/rule
 .PHONY : send_pkg/CMakeFiles/send_node.dir/rule
@@ -181,6 +196,171 @@ send_node: send_pkg/CMakeFiles/send_node.dir/rule
 send_node/fast:
 	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_node.dir/build.make send_pkg/CMakeFiles/send_node.dir/build
 .PHONY : send_node/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_generate_messages_cpp.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_generate_messages_cpp.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+send_pkg_generate_messages_cpp: send_pkg/CMakeFiles/send_pkg_generate_messages_cpp.dir/rule
+
+.PHONY : send_pkg_generate_messages_cpp
+
+# fast build rule for target.
+send_pkg_generate_messages_cpp/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_generate_messages_cpp.dir/build.make send_pkg/CMakeFiles/send_pkg_generate_messages_cpp.dir/build
+.PHONY : send_pkg_generate_messages_cpp/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/_send_pkg_generate_messages_check_deps_xyz.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/_send_pkg_generate_messages_check_deps_xyz.dir/rule
+.PHONY : send_pkg/CMakeFiles/_send_pkg_generate_messages_check_deps_xyz.dir/rule
+
+# Convenience name for target.
+_send_pkg_generate_messages_check_deps_xyz: send_pkg/CMakeFiles/_send_pkg_generate_messages_check_deps_xyz.dir/rule
+
+.PHONY : _send_pkg_generate_messages_check_deps_xyz
+
+# fast build rule for target.
+_send_pkg_generate_messages_check_deps_xyz/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/_send_pkg_generate_messages_check_deps_xyz.dir/build.make send_pkg/CMakeFiles/_send_pkg_generate_messages_check_deps_xyz.dir/build
+.PHONY : _send_pkg_generate_messages_check_deps_xyz/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_gencpp.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_gencpp.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_gencpp.dir/rule
+
+# Convenience name for target.
+send_pkg_gencpp: send_pkg/CMakeFiles/send_pkg_gencpp.dir/rule
+
+.PHONY : send_pkg_gencpp
+
+# fast build rule for target.
+send_pkg_gencpp/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_gencpp.dir/build.make send_pkg/CMakeFiles/send_pkg_gencpp.dir/build
+.PHONY : send_pkg_gencpp/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_generate_messages_eus.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_generate_messages_eus.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+send_pkg_generate_messages_eus: send_pkg/CMakeFiles/send_pkg_generate_messages_eus.dir/rule
+
+.PHONY : send_pkg_generate_messages_eus
+
+# fast build rule for target.
+send_pkg_generate_messages_eus/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_generate_messages_eus.dir/build.make send_pkg/CMakeFiles/send_pkg_generate_messages_eus.dir/build
+.PHONY : send_pkg_generate_messages_eus/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_geneus.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_geneus.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_geneus.dir/rule
+
+# Convenience name for target.
+send_pkg_geneus: send_pkg/CMakeFiles/send_pkg_geneus.dir/rule
+
+.PHONY : send_pkg_geneus
+
+# fast build rule for target.
+send_pkg_geneus/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_geneus.dir/build.make send_pkg/CMakeFiles/send_pkg_geneus.dir/build
+.PHONY : send_pkg_geneus/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_generate_messages_py.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_generate_messages_py.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_generate_messages_py.dir/rule
+
+# Convenience name for target.
+send_pkg_generate_messages_py: send_pkg/CMakeFiles/send_pkg_generate_messages_py.dir/rule
+
+.PHONY : send_pkg_generate_messages_py
+
+# fast build rule for target.
+send_pkg_generate_messages_py/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_generate_messages_py.dir/build.make send_pkg/CMakeFiles/send_pkg_generate_messages_py.dir/build
+.PHONY : send_pkg_generate_messages_py/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_generate_messages_lisp.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_generate_messages_lisp.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+send_pkg_generate_messages_lisp: send_pkg/CMakeFiles/send_pkg_generate_messages_lisp.dir/rule
+
+.PHONY : send_pkg_generate_messages_lisp
+
+# fast build rule for target.
+send_pkg_generate_messages_lisp/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_generate_messages_lisp.dir/build.make send_pkg/CMakeFiles/send_pkg_generate_messages_lisp.dir/build
+.PHONY : send_pkg_generate_messages_lisp/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_genlisp.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_genlisp.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_genlisp.dir/rule
+
+# Convenience name for target.
+send_pkg_genlisp: send_pkg/CMakeFiles/send_pkg_genlisp.dir/rule
+
+.PHONY : send_pkg_genlisp
+
+# fast build rule for target.
+send_pkg_genlisp/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_genlisp.dir/build.make send_pkg/CMakeFiles/send_pkg_genlisp.dir/build
+.PHONY : send_pkg_genlisp/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_generate_messages_nodejs.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_generate_messages_nodejs.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+send_pkg_generate_messages_nodejs: send_pkg/CMakeFiles/send_pkg_generate_messages_nodejs.dir/rule
+
+.PHONY : send_pkg_generate_messages_nodejs
+
+# fast build rule for target.
+send_pkg_generate_messages_nodejs/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_generate_messages_nodejs.dir/build.make send_pkg/CMakeFiles/send_pkg_generate_messages_nodejs.dir/build
+.PHONY : send_pkg_generate_messages_nodejs/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_gennodejs.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_gennodejs.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_gennodejs.dir/rule
+
+# Convenience name for target.
+send_pkg_gennodejs: send_pkg/CMakeFiles/send_pkg_gennodejs.dir/rule
+
+.PHONY : send_pkg_gennodejs
+
+# fast build rule for target.
+send_pkg_gennodejs/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_gennodejs.dir/build.make send_pkg/CMakeFiles/send_pkg_gennodejs.dir/build
+.PHONY : send_pkg_gennodejs/fast
+
+# Convenience name for target.
+send_pkg/CMakeFiles/send_pkg_genpy.dir/rule:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 send_pkg/CMakeFiles/send_pkg_genpy.dir/rule
+.PHONY : send_pkg/CMakeFiles/send_pkg_genpy.dir/rule
+
+# Convenience name for target.
+send_pkg_genpy: send_pkg/CMakeFiles/send_pkg_genpy.dir/rule
+
+.PHONY : send_pkg_genpy
+
+# fast build rule for target.
+send_pkg_genpy/fast:
+	cd /home/wulingfeng/catkin_ws/build && $(MAKE) -f send_pkg/CMakeFiles/send_pkg_genpy.dir/build.make send_pkg/CMakeFiles/send_pkg_genpy.dir/build
+.PHONY : send_pkg_genpy/fast
 
 src/send_node.o: src/send_node.cpp.o
 
@@ -216,13 +396,25 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... send_pkg_generate_messages"
 	@echo "... send_node"
+	@echo "... send_pkg_generate_messages_cpp"
+	@echo "... _send_pkg_generate_messages_check_deps_xyz"
+	@echo "... send_pkg_gencpp"
+	@echo "... send_pkg_generate_messages_eus"
+	@echo "... send_pkg_geneus"
+	@echo "... send_pkg_generate_messages_py"
+	@echo "... send_pkg_generate_messages_lisp"
+	@echo "... send_pkg_genlisp"
+	@echo "... send_pkg_generate_messages_nodejs"
+	@echo "... install"
+	@echo "... send_pkg_gennodejs"
+	@echo "... install/local"
+	@echo "... send_pkg_genpy"
 	@echo "... src/send_node.o"
 	@echo "... src/send_node.i"
 	@echo "... src/send_node.s"

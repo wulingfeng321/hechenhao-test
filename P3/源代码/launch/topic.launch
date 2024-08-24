@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="send_pkg" type="send_node" name="send_node" output="screen"/>
+  <node pkg="accept_pkg" type="accept_node" name="accept_node" output="screen"/>
+</launch>

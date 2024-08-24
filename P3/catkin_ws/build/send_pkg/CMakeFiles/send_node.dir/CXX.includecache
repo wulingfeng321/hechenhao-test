@@ -6,11 +6,27 @@
 
 #IncludeRegexTransform: 
 
+/home/wulingfeng/catkin_ws/devel/include/send_pkg/xyz.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/wulingfeng/catkin_ws/src/send_pkg/src/send_node.cpp
 ros/ros.h
 -
-std_msgs/Int64.h
--
+send_pkg/xyz.h
+/home/wulingfeng/catkin_ws/src/send_pkg/src/send_pkg/xyz.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -661,22 +677,6 @@ ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
-
-/opt/ros/noetic/include/std_msgs/Int64.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
 
 /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 ros/macros.h

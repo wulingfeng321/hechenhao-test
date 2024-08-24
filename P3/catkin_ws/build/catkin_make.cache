@@ -1,2 +1,2 @@
-accept_pkg:send_pkg:wpr_simulation
+accept_pkg:send_pkg
 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/wulingfeng/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wulingfeng/catkin_ws/install -G Unix Makefiles

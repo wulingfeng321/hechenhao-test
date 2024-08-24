@@ -133,7 +133,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/wulingfeng/catkin_ws/build/gtest/cmake_install.cmake")
   include("/home/wulingfeng/catkin_ws/build/accept_pkg/cmake_install.cmake")
   include("/home/wulingfeng/catkin_ws/build/send_pkg/cmake_install.cmake")
-  include("/home/wulingfeng/catkin_ws/build/wpr_simulation/cmake_install.cmake")
 
 endif()
 
